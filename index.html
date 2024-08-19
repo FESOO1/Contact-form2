@@ -26,6 +26,29 @@
         <label for="emailAddress">Email Address <span class="input-important-symbol">*</span> <input type="email" name="email" id="emailAddress"></label>
         <p class="required-text" id="emailAddressRequiredText"></p>
       </div>
+      <div class="query-type">
+        <label for="query-type">Query Type <span class="input-important-symbol">*</span></label>
+        <div class="query-type-inner">
+          <div class="general-enquiry">
+            <input type="radio" id="generalEnquiry" name="query-type" value="general-enquiry">  General Enquiry
+          </div>
+          <div class="support-request">
+            <input type="radio" id="supportRequest" name="query-type" value="support-request">  Support Request
+          </div>
+        </div>
+        <p class="required-text" id="queryTypeRequiredText"></p>
+      </div>
+      <div class="message">
+        <label for="messageInput">Message <span class="input-important-symbol">*</span> <textarea name="messageInput" id="messageInput"></textarea></label>
+        <p class="required-text" id="messageRequiredText"></p>
+      </div>
+      <div class="checkbox">
+        <div class="checkbox-inner">
+          <input type="checkbox" id="checkbox"> I consent to being contacted by the team <span class="input-important-symbol">*</span>
+        </div>
+        <p class="required-text" id="checkboxRequiredText"></p>
+      </div>
+      <button class="submit-button" id="submitButton" type="submit">Submit</button>
     </form>
   </div>
   <script src="./main.js"></script>

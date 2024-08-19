@@ -27,7 +27,7 @@ body {
 /* MESSAGE SUCCESS */
 
 .message-success {
-    top: -100px;
+    top: -200px;
     /* top: 25px; */
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@ label {
     margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 15px;
+    gap: 15px;
 }
 
 .first-name,
@@ -150,7 +150,7 @@ label {
 .query-type-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 15px;
+    gap: 15px;
 }
 
 .general-enquiry,
@@ -245,4 +245,31 @@ textarea:focus {
 
 .submit-button:hover {
     background-color: hsl(169, 100%, 19%);
+}
+
+/* MEDIA QEURIES */
+
+@media (max-width: 800px) {
+    .form-container {
+        width: 93%;
+    }
+}
+
+@media (max-width: 600px) {
+    .full-name,
+    .query-type-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .message-success {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .form-container {
+        padding: 20px;
+    }
 }

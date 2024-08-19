@@ -79,7 +79,7 @@ label {
     border-radius: 0.4rem;
     border: 1px solid hsl(186, 15%, 59%);
     margin-top: 3px;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     padding-left: 10px;
     outline: none;
     font-size: 1rem;
@@ -100,7 +100,7 @@ label {
     border-radius: 0.4rem;
     border: 1px solid hsl(186, 15%, 59%);
     margin-top: 3px;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     padding-left: 10px;
     outline: none;
     font-size: 1rem;
@@ -128,7 +128,7 @@ label {
     border-radius: 0.4rem;
     border: 1px solid hsl(186, 15%, 59%);
     margin-top: 5px;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     padding-left: 20px;
     outline: none;
     font-size: 1rem;
@@ -160,7 +160,7 @@ label {
     border-radius: 0.4rem;
     border: 1px solid hsl(186, 15%, 59%);
     margin-top: 5px;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     padding: 10px;
     outline: none;
     font-size: 1rem;
@@ -173,6 +173,7 @@ label {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .checkbox-inner {

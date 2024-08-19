@@ -60,6 +60,13 @@ submitBtn.addEventListener('click', e => {
         messageInput.style.border = '1px solid hsl(186, 15%, 59%)';
     };
 
+    if (checkbox.checked){
+        checkboxRequiredText.textContent = '';
+    } else {
+        errorMessages.push('The checkbox is not checked');
+        checkboxRequiredText.textContent = 'To submit this from, please consent to being contacted';
+    }
+
     if (errorMessages.length > 0) {
         e.preventDefault();
     };

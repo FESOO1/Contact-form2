@@ -17,7 +17,7 @@ body {
 
 .wrapper {
     min-height: 100vh;
-    padding-block: 50px;
+    padding-block: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@ label {
 /* REQUIRED WARNING TEXT */
 
 .required-text {
-    color: red;
+    color: hsl(0, 66%, 54%);
 }
 
 /* FULL NAME */

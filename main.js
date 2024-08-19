@@ -90,7 +90,7 @@ submitBtn.addEventListener('click', e => {
         messageSuccess.style.top = '20px';
         setTimeout(() => {
             messageSuccess.style.top = '-200px';
-        }, 3000);
+        }, 5000);
         messageInput.value = '';
         for (const allInputs of formContainer) {
             allInputs.value = '';

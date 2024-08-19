@@ -5,11 +5,17 @@ const submitBtn = document.getElementById('submitButton');
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
 const emailAddress = document.getElementById('emailAddress');
-const generalEnquiry = document.getElementById('generalEnquiry');
-const supportRequest = document.getElementById('supportRequest');
+/* const generalEnquiry = document.getElementById('generalEnquiry');
+const supportRequest = document.getElementById('supportRequest'); */
+const queryTypeInputs = document.querySelectorAll('.query-type-inputs');
 const messageInput = document.getElementById('messageInput');
 const checkbox = document.getElementById('checkbox');
 
+const formContainer = document.querySelectorAll('.form-container input');
+
+// SUCCESS MESSAGE
+
+const messageSuccess = document.querySelector('.message-success');
 
 // REQUIRED TEXTS
 
@@ -21,6 +27,8 @@ const messageRequiredText = document.getElementById('messageRequiredText');
 const checkboxRequiredText = document.getElementById('checkboxRequiredText');
 
 submitBtn.addEventListener('click', e => {
+    e.preventDefault();
+
     const errorMessages = [];
 
     if (firstName.value.length === 0) {
@@ -65,11 +73,28 @@ submitBtn.addEventListener('click', e => {
     } else {
         errorMessages.push('The checkbox is not checked');
         checkboxRequiredText.textContent = 'To submit this from, please consent to being contacted';
-    }
+    };
+
+    /* for (let i = 0; i < queryTypeInputs.length; i++) {
+        if (queryTypeInputs[i].checked) {
+            queryTypeRequiredText.textContent = '';
+        } else {
+            errorMessages.push('The queryTypeInput is not checked');
+            queryTypeRequiredText.textContent = 'Please select a query type';
+        }
+    } */
 
     if (errorMessages.length > 0) {
         e.preventDefault();
+    } else {
+        messageSuccess.style.top = '20px';
+        setTimeout(() => {
+            messageSuccess.style.top = '-100px';
+        }, 3000);
+        messageInput.value = '';
+        for (const allInputs of formContainer) {
+            allInputs.value = '';
+        };
     };
 
-    console.log(errorMessages);
 });

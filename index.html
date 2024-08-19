@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact form</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form class="form-container">
+      <div class="contact-us-text">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="full-name">
+        <div class="first-name">
+          <label for="firstName">First Name <span class="input-important-symbol">*</span> <input type="text" id="firstName"></label>
+          <p class="required-text" id="firstNameRequiredText">This field is required</p>
+        </div>
+        <div class="last-name">
+          <label for="lastName">Last Name <span class="input-important-symbol">*</span> <input type="text" id="lastName"></label>
+          <p class="required-text" id="lastNameRequiredText">This field is required</p>
+        </div>
+      </div>
+      <div class="email-address">
+        <label for="emailAddress">Email Address <span class="input-important-symbol">*</span> <input type="email" name="email" id="emailAddress"></label>
+        <p class="required-text" id="lastNameRequiredText">Please enter a valid email address</p>
+      </div>
+    </form>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>

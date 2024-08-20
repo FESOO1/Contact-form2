@@ -5,8 +5,8 @@ const submitBtn = document.getElementById('submitButton');
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
 const emailAddress = document.getElementById('emailAddress');
-/* const generalEnquiry = document.getElementById('generalEnquiry');
-const supportRequest = document.getElementById('supportRequest'); */
+const generalEnquiry = document.getElementById('generalEnquiry');
+const supportRequest = document.getElementById('supportRequest');
 const queryTypeInputs = document.querySelectorAll('.query-type-inputs');
 const messageInput = document.getElementById('messageInput');
 const checkbox = document.getElementById('checkbox');
@@ -83,6 +83,15 @@ submitBtn.addEventListener('click', e => {
             queryTypeRequiredText.textContent = 'Please select a query type';
         }
     } */
+   
+    if (generalEnquiry.checked) {
+        queryTypeRequiredText.textContent = '';
+    } else if (supportRequest.checked) {
+        queryTypeRequiredText.textContent = '';
+    } else {
+        errorMessages.push('The queryTypeInput is not checked');
+            queryTypeRequiredText.textContent = 'Please select a query type';
+    }
 
     if (errorMessages.length > 0) {
         e.preventDefault();
